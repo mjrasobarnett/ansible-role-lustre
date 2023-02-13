@@ -1,7 +1,4 @@
 ---
-- name: "Include OS-specific e2fsprogs installation tasks"
-  include_tasks: "install-e2fsprogs-{{ ansible_os_family }}.yml"
-
 - name: "Include OS-specific lustre repo configuration tasks"
   include_tasks: "install-repo-{{ ansible_os_family }}.yml"
 

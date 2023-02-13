@@ -10,15 +10,23 @@
     state: present
   check_mode: no
 
+- name: "Include OS-specific e2fsprogs installation tasks"
+  include_tasks: "install-e2fsprogs-{{ ansible_os_family }}.yml"
+  when:
+    - lustre_install_type == 'server'
+    - lustre_install_e2fsprogs | bool
+
 - name: "Include OS-specific package installation tasks"
   include_tasks: "install-server-{{ ansible_os_family }}.yml"
   when:
     - lustre_install_type == 'server'
+    - lustre_install_server | bool
 
 - name: "Include OS-specific package client installation tasks"
   include_tasks: "install-client-{{ ansible_os_family }}.yml"
   when:
     - lustre_install_type == 'client'
+    - lustre_install_client | bool
 
 - name: "Include LNET configuration tasks"
   include_tasks: "configure-lnet.yml"

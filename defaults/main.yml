@@ -5,6 +5,10 @@
 # Accepted values here: 'server', 'client'
 lustre_install_type: 'server'
 lustre_version: '2.12.7'
+# Booleans to manage whether this role should install lustre or not
+lustre_install_e2fsprogs: true
+lustre_install_server: true
+lustre_install_client: true
 # WARNING: use this variable to control whether this role will attempt
 # to format devices for Lustre
 lustre_format_disks: false
