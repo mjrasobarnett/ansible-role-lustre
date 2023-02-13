@@ -1,0 +1,38 @@
+---
+
+lustre_e2fsprogs_packages:
+  - 'e2fsprogs'
+  - 'e2fsprogs-libs'
+  - 'libcom_err'
+  - 'libss'
+
+lustre_server_packages:
+  - 'lustre'
+  - 'kmod-lustre'
+  - 'kmod-lustre-osd-ldiskfs'
+  - 'lustre-osd-ldiskfs-mount'
+
+lustre_server_debuginfo_packages:
+  - 'lustre-debuginfo'
+
+lustre_server_legacy_packages:
+  - 'lustre'
+  - 'lustre-modules'
+  - 'lustre-osd-ldiskfs'
+
+lustre_client_packages:
+  - 'lustre-client'
+  - 'kmod-lustre-client'
+
+lustre_client_debuginfo_packages:
+  - 'lustre-client-debuginfo'
+
+lustre_client_legacy_packages:
+  - 'lustre-client'
+  - 'lustre-client-modules'
+
+lustre_ha_resource_agents_packages:
+  - 'lustre-resource-agents'
+
+lustre_pyyaml_package: 'python3-pyyaml'
+
